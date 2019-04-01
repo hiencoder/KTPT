@@ -32,7 +32,7 @@
                 android:clickable="true"
                 android:textSize="18sp" />
 
-            <com.example.hiennv.loigiaihay.ui.customview.MyAutoCompleteTextView
+            <com.example.hiennv.loigiaihaykt.ui.customview.MyAutoCompleteTextView
                 android:id="@+id/mact_search"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

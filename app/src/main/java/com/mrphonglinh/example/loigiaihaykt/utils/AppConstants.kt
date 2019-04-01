@@ -2,8 +2,6 @@ package com.mrphonglinh.example.loigiaihaykt.utils
 
 class AppConstants {
     companion object {
-
-
         val BASE_URL = "https://api.loigiaihay.com/v3/"
         //Get list class
         //https://api.loigiaihay.com/v3/tags

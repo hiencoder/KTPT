@@ -18,6 +18,8 @@ import com.github.ybq.android.spinkit.style.FadingCircle
 import com.mrphonglinh.example.loigiaihaykt.R
 import com.mrphonglinh.example.loigiaihaykt.app.MyApplication
 import com.mrphonglinh.example.loigiaihaykt.receiver.NetworkReceiver
+import com.mrphonglinh.example.loigiaihaykt.utils.SharedPrefUtils
+import kotlinx.android.synthetic.main.activity_main.view.*
 
 abstract class BaseActivity : AppCompatActivity(), IView,
     NetworkReceiver.ConnectivityReceiverListener {
@@ -44,9 +46,16 @@ abstract class BaseActivity : AppCompatActivity(), IView,
     protected abstract fun stopScreen()
 
     var backPress: Long? = null
+
+    /**
+     * Biến SharedPrefUtils
+     */
+    protected var sharedPrefUtils: SharedPrefUtils? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(getLayoutId())
+        sharedPrefUtils = SharedPrefUtils(this)
         setupToolbar()
         initProgressBar()
         initData(savedInstanceState)
@@ -56,8 +65,10 @@ abstract class BaseActivity : AppCompatActivity(), IView,
     //    Init progressbar
     private fun initProgressBar() {
         progressBar = findViewById(R.id.pb_loading)
-        var fadeCircleSprite = FadingCircle()
-        progressBar!!.indeterminateDrawable = fadeCircleSprite
+        val fadeCircleSprite = FadingCircle()
+        if (progressBar != null) {
+            progressBar!!.indeterminateDrawable = fadeCircleSprite
+        }
     }
 
     override fun onPostCreate(savedInstanceState: Bundle?) {
@@ -147,7 +158,7 @@ abstract class BaseActivity : AppCompatActivity(), IView,
      */
     override fun showLoading() {
         if (progressBar != null && !progressBar!!.isShown) {
-
+            progressBar!!.visibility = View.VISIBLE
         }
         //showProgress(R.string.loading, null)
     }

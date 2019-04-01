@@ -3,7 +3,7 @@ package com.mrphonglinh.example.loigiaihaykt.data.event
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-class Article : BaseEvent() {
+open class Article : BaseEvent() {
     @Expose
     @SerializedName("articleId")
     protected var articleId: Int = 0

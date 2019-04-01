@@ -35,7 +35,7 @@
             android:background="@drawable/bg_item"/>
 
 
-        <com.example.hiennv.loigiaihay.ui.customview.MyAutoCompleteTextView
+        <com.mrphonglinh.example.loigiaihaykt.ui.customview.MyAutoCompleteTextView
             android:id="@+id/mact_search"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

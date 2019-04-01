@@ -36,7 +36,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="5dp">
-            <com.example.hiennv.loigiaihay.ui.customview.MyAutoCompleteTextView
+            <com.example.hiennv.loigiaihaykt.ui.customview.MyAutoCompleteTextView
                 android:id="@+id/mact_search_result"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

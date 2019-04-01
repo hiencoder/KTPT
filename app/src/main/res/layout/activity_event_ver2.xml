@@ -34,7 +34,7 @@
                 android:layout_toRightOf="@+id/btn_back"
                 android:layout_toLeftOf="@+id/iv_drop"/>
 
-            <com.example.hiennv.loigiaihay.ui.customview.MyAutoCompleteTextView
+            <com.example.hiennv.loigiaihaykt.ui.customview.MyAutoCompleteTextView
                 android:id="@+id/mact_search"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.intro.IntroActivity"
     android:background="#26c6da">
-    <include layout="@layout/toolbar"/>
+    <!--<include layout="@layout/toolbar"/>-->
     <android.support.v4.view.ViewPager
         android:id="@+id/vp_intro"
         android:layout_width="match_parent"

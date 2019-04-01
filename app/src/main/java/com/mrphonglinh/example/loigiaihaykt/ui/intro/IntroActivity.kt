@@ -3,22 +3,25 @@ package com.mrphonglinh.example.loigiaihaykt.ui.intro
 import android.os.Bundle
 import com.mrphonglinh.example.loigiaihaykt.R
 import com.mrphonglinh.example.loigiaihaykt.base.BaseActivity
+import kotlinx.android.synthetic.main.toolbar.*
+import timber.log.Timber
 
 public class IntroActivity : BaseActivity() {
+    override fun onNetworkConnectionChanged(isConnected: Boolean) {
+    }
+
     override fun initData(savedInstanceState: Bundle?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     override fun startScreen() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     override fun stopScreen() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     override fun setupToolbar() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        //setSupportActionBar(toolbar)
+        Timber.i("%s", "Abc")
     }
 
     override fun getLayoutId(): Int {
@@ -27,7 +30,6 @@ public class IntroActivity : BaseActivity() {
 
 
     override fun initEvents() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
 }
