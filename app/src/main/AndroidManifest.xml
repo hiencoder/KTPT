@@ -25,6 +25,9 @@
         <activity android:name=".ui.intro.IntroActivity">
 
         </activity>
+        <activity android:name=".ui.changeclass.ChangeClassActivity">
+
+		</activity>
     </application>
 
 </manifest>

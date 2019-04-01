@@ -6,6 +6,7 @@ import android.content.DialogInterface
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
+import android.os.Handler
 import android.support.annotation.LayoutRes
 import android.support.v7.app.AppCompatActivity
 import android.view.View
@@ -19,7 +20,6 @@ import com.mrphonglinh.example.loigiaihaykt.R
 import com.mrphonglinh.example.loigiaihaykt.app.MyApplication
 import com.mrphonglinh.example.loigiaihaykt.receiver.NetworkReceiver
 import com.mrphonglinh.example.loigiaihaykt.utils.SharedPrefUtils
-import kotlinx.android.synthetic.main.activity_main.view.*
 
 abstract class BaseActivity : AppCompatActivity(), IView,
     NetworkReceiver.ConnectivityReceiverListener {
@@ -221,8 +221,17 @@ abstract class BaseActivity : AppCompatActivity(), IView,
         }
     }
 
+    private var doubleBackToExitPressedOnce = false
     override fun onBackPressed() {
         super.onBackPressed()
-
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed()
+            return
+        }
+        this.doubleBackToExitPressedOnce = true
+        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_LONG).show()
+        Handler().postDelayed(Runnable {
+            doubleBackToExitPressedOnce = false
+        },2000)
     }
 }
