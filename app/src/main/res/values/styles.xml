@@ -1,0 +1,62 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="vpiTabPageIndicatorStyle">@style/CustomTabIndicator</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!--Style for tab indicator-->
+    <style name="CustomTabIndicator" parent="Widget.TabPageIndicator">
+        <item name="android:background">@drawable/custom_tab_incicator</item>
+        <item name="android:textColor">@drawable/custom_tab_text_color</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:fadingEdge">horizontal</item>
+        <item name="android:fadingEdgeLength">5dp</item>
+        <item name="android:maxLines">2</item>
+    </style>
+
+    <style name="NavigationTheme" parent="AppTheme">
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:listPreferredItemHeightSmall">30dp</item>
+    </style>
+
+    <!--Style BaseText-->
+    <style name="BaseText">
+        <item name="android:padding">5dp</item>
+    </style>
+    <!--Style text header-->
+    <style name="BaseText.TextHeader">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/colorTextTitle</item>
+    </style>
+    <!--Style IntroText-->
+    <style name="BaseText.IntroText">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <!--Style button-->
+    <style name="ButtonStyle">
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:layout_margin">3dp</item>
+    </style>
+</resources>
